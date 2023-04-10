@@ -1,8 +1,14 @@
-# variables.tf
-# Use this file to declare the variables that the module will use.
-
-# A dummy variable is provided to force a test validation
-variable "dummy" {
+variable "bucket_name" {
   type        = string
-  description = "dummy variable"
+  description = "name of the s3 bucket"
+  default     = "test-bucket"
+}
+
+variable "credentials" {
+  type = map(string)
+  default = {
+    mount = "cloudflare"
+    name  = "r2"
+  }
+  description = "Map of where Vault stores the credentials."
 }

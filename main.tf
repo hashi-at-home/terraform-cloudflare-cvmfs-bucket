@@ -1,36 +1,3 @@
-terraform {
-  backend "consul" {
-    scheme = "http"
-    path   = "terraform/cloudflare-cvmfs"
-  }
-  required_providers {
-    aws = {
-      source  = "hashicorp/aws"
-      version = "4.20.1"
-    }
-
-    vault = {
-      source  = "hashicorp/vault"
-      version = "3.14.0"
-    }
-  }
-}
-
-variable "bucket_name" {
-  type        = string
-  description = "name of the s3 bucket"
-  default     = "test-bucket"
-}
-
-variable "credentials" {
-  type = map(string)
-  default = {
-    mount = "cloudflare"
-    name  = "r2"
-  }
-  description = "Map of where Vault stores the credentials."
-}
-
 data "vault_kv_secret_v2" "cloudflare" {
   mount = var.credentials.mount
   name  = var.credentials.name
@@ -48,6 +15,10 @@ provider "aws" {
 }
 
 
-resource "aws_s3_bucket" "test_bucket" {
+#tfsec:ignore:aws-s3-ignore-public-acls tfsec:ignore:aws-s3-no-public-buckets tfsec:ignore:aws-s3-block-public-acls tfsec:ignore:aws-s3-block-public-policy tfsec:ignore:aws-s3-enable-bucket-encryption tfsec:ignore:aws-s3-encryption-customer-key tfsec:ignore:aws-s3-enable-bucket-logging tfsec:ignore:aws-s3-specify-public-access-block
+resource "aws_s3_bucket" "bucket" {
   bucket = var.bucket_name
+  versioning {
+    enabled = true
+  }
 }

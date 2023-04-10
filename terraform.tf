@@ -1,15 +1,17 @@
-# Use this file to declare the terraform configuration
-# Add things like:
-# - required version
-# - required providers
-# Do not add things like:
-# - provider configuration
-# - backend configuration
-# These will be declared in the terraform document which consumes the module.
-
 terraform {
-  required_version = ">1.2.0"
+  backend "consul" {
+    scheme = "http"
+    path   = "terraform/cloudflare-cvmfs"
+  }
   required_providers {
-    # Add your required providers here.
+    aws = {
+      source  = "hashicorp/aws"
+      version = "4.20.1"
+    }
+
+    vault = {
+      source  = "hashicorp/vault"
+      version = "3.14.0"
+    }
   }
 }
