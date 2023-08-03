@@ -1,8 +1,4 @@
 terraform {
-  backend "consul" {
-    scheme = "http"
-    path   = "terraform/cloudflare-cvmfs"
-  }
   required_providers {
     aws = {
       source  = "hashicorp/aws"
@@ -11,7 +7,7 @@ terraform {
 
     vault = {
       source  = "hashicorp/vault"
-      version = "3.18.0"
+      version = "3.19.0"
     }
   }
 }
