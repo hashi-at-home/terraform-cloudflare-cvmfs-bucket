@@ -60,7 +60,7 @@ examples themselves
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.17.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.18.1 |
 | <a name="provider_vault"></a> [vault](#provider\_vault) | 3.19.0 |
 
 ## Modules
