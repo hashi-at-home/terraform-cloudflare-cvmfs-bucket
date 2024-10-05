@@ -79,7 +79,7 @@ No modules.
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
 | <a name="input_bucket_name"></a> [bucket\_name](#input\_bucket\_name) | name of the s3 bucket | `string` | `"test-bucket"` | no |
-| <a name="input_credentials"></a> [credentials](#input\_credentials) | Map of where Vault stores the credentials. | `map(string)` | <pre>{<br>  "mount": "cloudflare",<br>  "name": "r2"<br>}</pre> | no |
+| <a name="input_credentials"></a> [credentials](#input\_credentials) | Map of where Vault stores the credentials. | `map(string)` | <pre>{<br/>  "mount": "cloudflare",<br/>  "name": "r2"<br/>}</pre> | no |
 
 ## Outputs
 
