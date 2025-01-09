@@ -53,15 +53,15 @@ examples themselves
 
 | Name | Version |
 |------|---------|
-| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.82.2 |
-| <a name="requirement_vault"></a> [vault](#requirement\_vault) | 4.1.0 |
+| <a name="requirement_aws"></a> [aws](#requirement\_aws) | 5.83.0 |
+| <a name="requirement_vault"></a> [vault](#requirement\_vault) | 4.5.0 |
 
 ## Providers
 
 | Name | Version |
 |------|---------|
-| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.82.2 |
-| <a name="provider_vault"></a> [vault](#provider\_vault) | 4.1.0 |
+| <a name="provider_aws"></a> [aws](#provider\_aws) | 5.83.0 |
+| <a name="provider_vault"></a> [vault](#provider\_vault) | 4.5.0 |
 
 ## Modules
 
@@ -71,8 +71,8 @@ No modules.
 
 | Name | Type |
 |------|------|
-| [aws_s3_bucket.bucket](https://registry.terraform.io/providers/hashicorp/aws/5.82.2/docs/resources/s3_bucket) | resource |
-| [vault_kv_secret_v2.cloudflare](https://registry.terraform.io/providers/hashicorp/vault/4.1.0/docs/data-sources/kv_secret_v2) | data source |
+| [aws_s3_bucket.bucket](https://registry.terraform.io/providers/hashicorp/aws/5.83.0/docs/resources/s3_bucket) | resource |
+| [vault_kv_secret_v2.cloudflare](https://registry.terraform.io/providers/hashicorp/vault/4.5.0/docs/data-sources/kv_secret_v2) | data source |
 
 ## Inputs
 
